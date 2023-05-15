@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", () => {
       console.log(response)
       for(var i=0; i< response.data.length; i++){
             reloadData(response.data[i])
+
          }
      })
      .catch((error) => {
@@ -35,6 +36,7 @@ window.addEventListener("DOMContentLoaded", () => {
       delbtn.onclick  = () => {
          localStorage.removeItem(obj.email)
          parentelem.removeChild(childelem)
+         axios.delete(`https://crudcrud.com/api/fe8a97f9f7d24b0cbbe0b91264a8a786/appointmentdetails/${obj._id}`)
       }
       childelem.appendChild(delbtn)
       childelem.appendChild(edit)
@@ -60,9 +62,6 @@ function submitting(event){
     
      // localStorage.setItem('userdetails', JSON.stringify(obj))
      // localStorage.setItem(obj.email, JSON.stringify(obj))
-
-   
-    showuseronscreen(obj)
 
     function showuseronscreen(obj){
      var parentelem = document.getElementById('listOfitems')
@@ -92,6 +91,7 @@ function submitting(event){
       delbtn.onclick  = () => {
          localStorage.removeItem(obj.email)
          parentelem.removeChild(childelem)
+        
       }
       childelem.appendChild(delbtn)
       childelem.appendChild(edit)
