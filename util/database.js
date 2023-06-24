@@ -5,4 +5,5 @@ const sequelize = new Sequelize('booking', 'root', 'Hannah903@ophio',{
     host: 'localhost'
 });
 
+
 module.exports = sequelize;

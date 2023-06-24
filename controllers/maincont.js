@@ -55,7 +55,7 @@ exports.submitform = async (req, res) => {
       res.status(500).json({ message: 'Internal server error' });
       // res.redirect('/');
     });
-};
+}
 
 exports.deleteUser = async (req, res) => {
   const userId = req.params.id;

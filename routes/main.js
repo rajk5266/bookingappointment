@@ -8,8 +8,6 @@ const router = express.Router();
 
 router.get('/',formcontroller.showform);
 
-// router.post
-
 router.get('/users',formcontroller.getUser);
 
 router.post('/users', formcontroller.submitform)
